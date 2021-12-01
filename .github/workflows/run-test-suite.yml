@@ -213,7 +213,12 @@ jobs:
         # https://github.com/actions/virtual-environments/blob/main/images/win/Windows2016-Readme.md
         # https://github.com/actions/virtual-environments/blob/main/images/win/Windows2019-Readme.md
         # https://github.com/actions/virtual-environments/blob/main/images/win/Windows2022-Readme.md
-        os: [windows-2016, windows-2019, windows-2022, windows-latest]
+        os: [windows-2019, windows-2022]
+        deprecated: [false]
+        include:
+          - os: windows-2016
+            deprecated: true
+    continue-on-error: ${{ matrix.deprecated }}
     runs-on: ${{ matrix.os }}
     steps:
     - name: Checkout
