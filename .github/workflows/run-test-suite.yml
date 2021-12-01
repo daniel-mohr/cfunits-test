@@ -219,7 +219,6 @@ jobs:
         include:
           - os: windows-2016
             deprecated: true
-        include:
           - os: windows-2022
             beta: true
     continue-on-error: ((${{ matrix.deprecated }}) || (${{ matrix.beta }}))
