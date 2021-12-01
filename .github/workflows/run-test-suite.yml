@@ -226,11 +226,6 @@ jobs:
       shell: cmd
     - name: print environment variables (powershell)
       run: |
-        echo "RUNNER_OS $env:%RUNNER_OS%"
-        echo "RUNNER_NAME $env:%RUNNER_NAME%"
-      shell: powershell
-    - name: print environment variables (powershell)
-      run: |
         echo "RUNNER_OS $env:RUNNER_OS"
         echo "RUNNER_NAME $env:RUNNER_NAME"
       shell: powershell
