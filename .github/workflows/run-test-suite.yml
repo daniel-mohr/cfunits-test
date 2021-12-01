@@ -33,7 +33,7 @@ jobs:
             deprecated: true
           - os: windows-2022
             beta: true
-    continue-on-error: ((${{ matrix.deprecated }}) || (${{ matrix.beta }}))
+    continue-on-error: ${{ matrix.deprecated }} || ${{ matrix.beta }}
     runs-on: ${{ matrix.os }}
     steps:
     - name: Checkout
